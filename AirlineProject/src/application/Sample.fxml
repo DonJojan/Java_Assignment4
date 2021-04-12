@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <left>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="b" layoutX="95.0" layoutY="389.0" mnemonicParsing="false" onAction="#search" text="Search" />
+            <ListView fx:id="lv" layoutX="530.0" layoutY="200.0" onMouseClicked="#Click" prefHeight="300.0" prefWidth="350.0" />
+            <ComboBox fx:id="comb" layoutX="170.0" layoutY="140.0" onAction="#Select" prefHeight="26.0" prefWidth="168.0" promptText="Select Airline" />
+            <Label fx:id="label" layoutX="172.0" layoutY="406.0" text="   " />
+            <ComboBox fx:id="comb1" layoutX="170.0" layoutY="200.0" onAction="#Select1" prefHeight="26.0" prefWidth="172.0" promptText="Select Airline Number" />
+            <ComboBox fx:id="comb2" layoutX="170.0" layoutY="260.0" onAction="#Select2" prefHeight="26.0" prefWidth="176.0" promptText="Select Departure Airport" />
+            <ComboBox fx:id="comb3" layoutX="170.0" layoutY="330.0" onAction="#Select3" prefHeight="26.0" prefWidth="174.0" promptText="Select Arrival Airport" />
+            <RadioButton fx:id="radio1" layoutX="200.0" layoutY="80.0" mnemonicParsing="false" onAction="#radioselect" text="Airlines">
+               <toggleGroup>
+                  <ToggleGroup fx:id="Choice" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="radio2" layoutX="310.0" layoutY="80.0" mnemonicParsing="false" onAction="#airlineselect" text="Airline Number" toggleGroup="$Choice" />
+            <RadioButton fx:id="radio4" layoutX="620.0" layoutY="80.0" mnemonicParsing="false" onAction="#arrivalselect" text="Arrival Airport" toggleGroup="$Choice" />
+            <RadioButton fx:id="radio3" layoutX="450.0" layoutY="80.0" mnemonicParsing="false" onAction="#depselect" text="Departure Airport" toggleGroup="$Choice" />
+            <Label layoutX="40.0" layoutY="144.0" prefHeight="18.0" prefWidth="63.0" text="Airline" />
+            <Label layoutX="40.0" layoutY="204.0" text="Airline Number" />
+            <Label layoutX="40.0" layoutY="264.0" text="Departure Airport" />
+            <Label layoutX="40.0" layoutY="334.0" text="Arrival Airport" />
+            <Label layoutX="230.0" layoutY="26.0" text="Airline Information System" textFill="#ea1d1d">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lv1" layoutX="530.0" layoutY="175.0" prefHeight="25.0" prefWidth="350.0" />
+            <Button fx:id="close" layoutX="244.0" layoutY="389.0" mnemonicParsing="false" onAction="#closebtn" text="Close" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
